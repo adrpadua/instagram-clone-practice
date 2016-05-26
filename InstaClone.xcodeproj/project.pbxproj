@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A00886551CF688F300A85FCF /* Beleren.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A00886541CF688F300A85FCF /* Beleren.ttf */; };
+		A00886581CF690EE00A85FCF /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00886571CF690EE00A85FCF /* MyButton.swift */; };
+		A008865C1CF69C9600A85FCF /* Camera.png in Resources */ = {isa = PBXBuildFile; fileRef = A008865B1CF69C9600A85FCF /* Camera.png */; };
+		A00886601CF69F9600A85FCF /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = A008865F1CF69F9600A85FCF /* AppIcon.png */; };
 		A0B144381CF547960093CE0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B144371CF547960093CE0D /* AppDelegate.swift */; };
 		A0B1443A1CF547960093CE0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B144391CF547960093CE0D /* ViewController.swift */; };
 		A0B1443D1CF547960093CE0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0B1443B1CF547960093CE0D /* Main.storyboard */; };
@@ -19,6 +23,10 @@
 		1064FB7444E1F26BFF106E96 /* Pods-InstaClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaClone.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstaClone/Pods-InstaClone.release.xcconfig"; sourceTree = "<group>"; };
 		5BC2229C54F2CD2646776C54 /* Pods_InstaClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8090A253202D2A6F1B92ED97 /* Pods-InstaClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaClone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstaClone/Pods-InstaClone.debug.xcconfig"; sourceTree = "<group>"; };
+		A00886541CF688F300A85FCF /* Beleren.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Beleren.ttf; sourceTree = "<group>"; };
+		A00886571CF690EE00A85FCF /* MyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
+		A008865B1CF69C9600A85FCF /* Camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Camera.png; sourceTree = "<group>"; };
+		A008865F1CF69F9600A85FCF /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon.png; sourceTree = "<group>"; };
 		A0B144341CF547960093CE0D /* InstaClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0B144371CF547960093CE0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0B144391CF547960093CE0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +65,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A00886561CF68E6A00A85FCF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A008865F1CF69F9600A85FCF /* AppIcon.png */,
+				A008865B1CF69C9600A85FCF /* Camera.png */,
+				A00886541CF688F300A85FCF /* Beleren.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		A0B1442B1CF547960093CE0D = {
 			isa = PBXGroup;
 			children = (
@@ -78,8 +96,10 @@
 		A0B144361CF547960093CE0D /* InstaClone */ = {
 			isa = PBXGroup;
 			children = (
+				A00886561CF68E6A00A85FCF /* Resources */,
 				A0B144371CF547960093CE0D /* AppDelegate.swift */,
 				A0B144391CF547960093CE0D /* ViewController.swift */,
+				A00886571CF690EE00A85FCF /* MyButton.swift */,
 				A0B1443B1CF547960093CE0D /* Main.storyboard */,
 				A0B1443E1CF547960093CE0D /* Assets.xcassets */,
 				A0B144401CF547960093CE0D /* LaunchScreen.storyboard */,
@@ -151,6 +171,9 @@
 			files = (
 				A0B144421CF547960093CE0D /* LaunchScreen.storyboard in Resources */,
 				A0B1443F1CF547960093CE0D /* Assets.xcassets in Resources */,
+				A00886601CF69F9600A85FCF /* AppIcon.png in Resources */,
+				A008865C1CF69C9600A85FCF /* Camera.png in Resources */,
+				A00886551CF688F300A85FCF /* Beleren.ttf in Resources */,
 				A0B1443D1CF547960093CE0D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,6 +235,7 @@
 			files = (
 				A0B1443A1CF547960093CE0D /* ViewController.swift in Sources */,
 				A0B144381CF547960093CE0D /* AppDelegate.swift in Sources */,
+				A00886581CF690EE00A85FCF /* MyButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

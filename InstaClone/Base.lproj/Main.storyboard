@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pOE-4F-B3f">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -8,7 +8,7 @@
         <!--View Controller-->
         <scene sceneID="32J-jD-z67">
             <objects>
-                <viewController id="xVh-Ax-DAl" sceneMemberID="viewController">
+                <viewController id="xVh-Ax-DAl" customClass="ViewController" customModule="InstaClone" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="psT-sS-VYS"/>
                         <viewControllerLayoutGuide type="bottom" id="utF-H2-vnJ"/>
@@ -16,9 +16,71 @@
                     <view key="view" contentMode="scaleToFill" id="912-rb-Rke">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Camera" translatesAutoresizingMaskIntoConstraints="NO" id="d3P-6f-YtN">
+                                <rect key="frame" x="150" y="72" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="WCw-0n-fh9"/>
+                                    <constraint firstAttribute="width" constant="300" id="hiE-3l-QzZ"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="xCn-ut-ai7">
+                                <rect key="frame" x="200" y="380" width="200" height="156"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username/Email Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W1j-bp-ePn">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="VlA-St-X0N"/>
+                                            <constraint firstAttribute="width" constant="200" id="aZr-Cs-ycU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ygn-oc-cNA">
+                                        <rect key="frame" x="0.0" y="42" width="200" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="1Hb-gK-wwh"/>
+                                            <constraint firstAttribute="height" constant="30" id="aAV-RD-NBe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQe-it-kIq" customClass="MyButton" customModule="InstaClone" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="84" width="200" height="30"/>
+                                        <color key="backgroundColor" red="0.80000000000000004" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="26G-RN-UCg"/>
+                                            <constraint firstAttribute="height" constant="30" id="lfs-ve-D0S"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <state key="normal" title="LOGIN">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8U2-6a-pTi">
+                                        <rect key="frame" x="31" y="126" width="138" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="fUy-05-QTN"/>
+                                        </constraints>
+                                        <state key="normal" title="Create new account">
+                                            <color key="titleColor" red="0.76862745099999996" green="0.0" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xCn-ut-ai7" firstAttribute="top" secondItem="d3P-6f-YtN" secondAttribute="bottom" constant="8" id="7nc-BY-dTv"/>
+                            <constraint firstItem="d3P-6f-YtN" firstAttribute="top" secondItem="psT-sS-VYS" secondAttribute="bottom" constant="8" id="Zwc-x6-Q5A"/>
+                            <constraint firstItem="xCn-ut-ai7" firstAttribute="centerX" secondItem="d3P-6f-YtN" secondAttribute="centerX" id="g9W-Y7-1Rj"/>
+                            <constraint firstItem="d3P-6f-YtN" firstAttribute="centerX" secondItem="912-rb-Rke" secondAttribute="centerX" id="hnX-Rr-oVC"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3dB-lv-0s3"/>
+                    <connections>
+                        <segue destination="Z4m-LX-8d5" kind="push" id="sTA-Vq-ECa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="30o-9Z-7hw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -33,13 +95,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="FCq-g1-n7x">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="FCq-g1-n7x">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FCq-g1-n7x" id="g6K-wK-4JJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="tBo-PT-5v6" kind="push" id="Ahc-6w-K0D"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -47,6 +112,7 @@
                             <outlet property="delegate" destination="Z4m-LX-8d5" id="OYb-QM-3BK"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="H3a-fT-h6O"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rLg-x8-3m1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -65,19 +131,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="YP8-Rq-dqj"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vov-fe-my2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2509" y="-213"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--InstaCrap-->
         <scene sceneID="3ig-O9-vLL">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pOE-4F-B3f" sceneMemberID="viewController">
+                <navigationController title="InstaCrap" automaticallyAdjustsScrollViewInsets="NO" id="pOE-4F-B3f" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vKj-LV-X1a">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.80000000000000004" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -89,4 +157,7 @@
             <point key="canvasLocation" x="301" y="-213"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Camera" width="800" height="820"/>
+    </resources>
 </document>
